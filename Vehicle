@@ -1,0 +1,26 @@
+package vehiclerentalsystem;
+class Vehicle {
+    private String vehicleNumber;
+    private String manufacturer;
+    private String model;
+    private double rentalRatePerDay;
+
+    public Vehicle(String vehicleNumber, String manufacturer, String model, double rentalRatePerDay) {
+        this.vehicleNumber = vehicleNumber;
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.rentalRatePerDay = rentalRatePerDay;
+    }
+
+    public double getRentalCost(int numDays) {
+        return rentalRatePerDay * numDays;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle Number: " + vehicleNumber +
+               "\nManufacturer: " + manufacturer +
+               "\nModel: " + model +
+               "\nRental Rate per Day: RM" + rentalRatePerDay;
+    }
+}
