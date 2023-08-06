@@ -11,9 +11,14 @@ class Motorcycle extends Vehicle {
         return engineCapacity * 50;
     }
 
+    
     @Override
     public double getRentalCost(int numDays) {
-        return super.getRentalCost(numDays) + (getTopSpeed() >= 300 ? 150 : 0);
+        if (getTopSpeed() >= 300) {
+            return super.getRentalCost(numDays) + 150;
+        } else {
+            return super.getRentalCost(numDays);
+        }
     }
 
     @Override
