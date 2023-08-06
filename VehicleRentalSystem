@@ -14,7 +14,7 @@ public class Vehiclerentalsystem {
             System.out.println(vehicle);
             System.out.println("Rental Cost for " + numDays + " days: RM" + vehicle.getRentalCost(numDays));
             if (vehicle instanceof Motorcycle) {
-                System.out.println("Top Speed: " + ((Motorcycle) vehicle).getTopSpeed() + " km/h");
+                System.out.println("Top Speed: " + ((Motorcycle) vehicle).getTopSpeed() + " km");
             }
             System.out.println();
         }
