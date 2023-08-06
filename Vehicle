@@ -1,0 +1,21 @@
+public class Vehiclerentalsystem {
+    public static void main(String[] args) {
+        Vehicle[] vehicles = {
+            new Car("C001", "Toyota", "Corolla", 50, 4),
+            new Car("C002", "Honda", "Civic", 60, 2),
+            new Motorcycle("M001", "Yamaha", "R1", 100, 1000),
+            new Motorcycle("M002", "Kawasaki", "Ninja", 80, 600)
+        };
+
+        int numDays = 5;
+
+        for (Vehicle vehicle : vehicles) {
+            System.out.println(vehicle);
+            System.out.println("Rental Cost for " + numDays + " days: RM" + vehicle.getRentalCost(numDays));
+            if (vehicle instanceof Motorcycle) {
+                System.out.println("Top Distance: " + ((Motorcycle) vehicle).getTotalDistance() + " km");
+            }
+            System.out.println();
+        }
+    }
+}
