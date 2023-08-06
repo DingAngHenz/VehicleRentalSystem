@@ -1,0 +1,20 @@
+package vehiclerentalsystem;
+
+class Car extends Vehicle {
+    private int numDoors;
+
+    public Car(String vehicleNumber, String manufacturer, String model, double rentalRatePerDay, int numDoors) {
+        super(vehicleNumber, manufacturer, model, rentalRatePerDay);
+        this.numDoors = numDoors;
+    }
+
+    @Override
+    public double getRentalCost(int numDays) {
+        return super.getRentalCost(numDays) + (numDoors > 2 ? 35 * numDays : 0);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nNumber of Doors: " + numDoors;
+    }
+}
