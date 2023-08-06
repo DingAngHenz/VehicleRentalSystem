@@ -9,8 +9,12 @@ class Car extends Vehicle {
     }
 
     @Override
-    public double getRentalCost(int numDays) {
-        return super.getRentalCost(numDays) + (numDoors > 2 ? 35 * numDays : 0);
+     public double getRentalCost(int numDays) {
+        if (numDoors > 2) {
+            return super.getRentalCost(numDays) + 35 * numDays;
+        } else {
+            return super.getRentalCost(numDays);
+        }
     }
 
     @Override
@@ -18,3 +22,4 @@ class Car extends Vehicle {
         return super.toString() + "\nNumber of Doors: " + numDoors;
     }
 }
+
