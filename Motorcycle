@@ -7,19 +7,17 @@ class Motorcycle extends Vehicle {
         this.engineCapacity = engineCapacity;
     }
 
-    public int getTotalDistance() {
-        return engineCapacity * 1;
+    public int getTopSpeed() {
+        return engineCapacity * 50;
     }
 
     @Override
     public double getRentalCost(int numDays) {
-        return super.getRentalCost(numDays) + (getTotalDistance() >= 300 ? 150 : 0);
+        return super.getRentalCost(numDays) + (getTopSpeed() >= 300 ? 150 : 0);
     }
 
     @Override
     public String toString() {
         return super.toString() + "\nEngine Capacity: " + engineCapacity + "cc";
     }
-
-
 }
